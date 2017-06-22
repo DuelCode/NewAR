@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43D76506-CEDA-4757-B384-B5AF5D486966}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NyARToolkitCS.markersystem</RootNamespace>
+    <AssemblyName>NyARToolkitCS.markersystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="markersystem\INyARMarkerSystemConfig.cs" />
+    <Compile Include="markersystem\INyARMarkerSystemSquareDetect.cs" />
+    <Compile Include="markersystem\INyARSingleCameraSystemObserver.cs" />
+    <Compile Include="markersystem\NyARMarkerSystem.cs" />
+    <Compile Include="markersystem\NyARMarkerSystemConfig.cs" />
+    <Compile Include="markersystem\NyARSensor.cs" />
+    <Compile Include="markersystem\NyARSingleCameraSystem.cs" />
+    <Compile Include="markersystem\NyARSingleCameraView.cs" />
+    <Compile Include="markersystem\utils\ARMarkerList.cs" />
+    <Compile Include="markersystem\utils\ARMarkerSortList.cs" />
+    <Compile Include="markersystem\utils\ARPlayCardList.cs" />
+    <Compile Include="markersystem\utils\MultiResolutionPattProvider.cs" />
+    <Compile Include="markersystem\utils\NyIdList.cs" />
+    <Compile Include="markersystem\utils\SquareStack.cs" />
+    <Compile Include="markersystem\utils\TMarkerData.cs" />
+    <Compile Include="markersystem\utils\TrackingList.cs" />
+    <Compile Include="markersystem\utils\VertexSortTable.cs" />
+    <Compile Include="nftsystem\INyARNftSystemConfig.cs" />
+    <Compile Include="nftsystem\NyARNftSystem.cs" />
+    <Compile Include="nftsystem\NyARNftSystemConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NyARToolkitCS\NyARToolkitCS.csproj">
+      <Project>{3d5ad0f6-a13c-4ceb-b614-49bef1ddf367}</Project>
+      <Name>NyARToolkitCS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
